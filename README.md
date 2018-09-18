@@ -1,24 +1,9 @@
-# README
+docker build -t arbeit_1 .
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Run TTY: docker run -p 8080:80 -t arbeit_1
 
-Things you may want to cover:
+Run Background: docker run -p 8059:80 -d arbeit_1
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Stop all: docker stop $(docker ps -aq)
+Kill all: docker rm $(docker ps -aq)
