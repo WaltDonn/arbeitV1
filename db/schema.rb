@@ -49,8 +49,6 @@ ActiveRecord::Schema.define(version: 20180603003749) do
     t.integer "priority"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "specsheet"
-    t.string "specsheet_name"
   end
 
   create_table "users", force: :cascade do |t|
