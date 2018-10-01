@@ -21,7 +21,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
+    @user = User.new(bad_user_params)
     if @user.role.nil?
       @user.role = "member"
     end
@@ -61,6 +61,10 @@ class UsersController < ApplicationController
       logger.info(@user.as_json)
     end
 
+    def bad_user_params
+      params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :role, :active)
+    end
+    
     def user_params
       if current_user && current_user.role?(:admin)
         params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :role, :active)
