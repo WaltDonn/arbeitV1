@@ -24,7 +24,7 @@
 	it's gotta be a good thing
   -->
   <b>Description</b>:<br>
-  <%= raw @project.description %>
+  <%= raw sanitize(@project.description) %>
 </p>
 
 <p>
