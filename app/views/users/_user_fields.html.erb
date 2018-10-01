@@ -4,7 +4,6 @@
 
 <%= f.input :password %>
 <%= f.input :password_confirmation %>
-
 <% if current_user && current_user.role?(:admin) %>
   <%= f.input :role, :collection => User::ROLES, :prompt => true %>
 <% end %>
