@@ -19,8 +19,8 @@ namespace :db do
     
     # Step 2: add Prof. H as a default member and manager for every default project
     u = User.new
-    u.first_name = "Professor"
-    u.last_name = "Heimann"
+    u.first_name = "Prof"
+    u.last_name = "H"
     u.email = "profh@cmu.edu"
     u.password = "secret"
     u.password_confirmation = "secret"
